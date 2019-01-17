@@ -1,0 +1,82 @@
+@import 'base.css';
+
+header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:1rem; left: 50%; transform: translateX(-50%); height:4rem; font-weight: 800; background-color: #fff; z-index: 999;}
+	.logo {width: 9rem; float: left; margin-left: 4rem; line-height: 56px;}
+	.logo > img {border: 3px solid #333;}
+	.navs {float: left; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
+	.navs .nav {float: left; padding: 0 2.5em;}
+	.lngs {float: right; font-size:0.75em; margin-right: 3em;}
+	.lngs > li {float: left; padding: 0 1em; line-height: 62px;}
+	.lngs > li:first-child {color: #ec2427; padding: 0 1em;}
+
+.about { width: 100%;}
+	.about_container { max-width: 1600px; margin: 13em auto;}
+	.about_container > ul > li {float: left; width: 50%;}
+	.about_container .whybrt_left {padding: 0 2.5em 0 5em ;}
+	.about_container .whybrt_right {padding: 0 5em 0 2.5em;}
+		.whybrt_right > :first-child {font-size: 10.5vw; font-weight: bold; line-height: 1.25em; margin-left:0.75em;}
+		.whybrt_right > :nth-child(2) {font-size: 4.5vw; font-weight: bold; line-height: 0.25em;}
+		.whybrt_right > p { color:#999; margin-top:4em; padding-top:4em; border-top: 1px solid #333; line-height: 2em}
+
+.ceo {width: 100%;}
+	.ceo_wrap {width: 100%; max-width:1056px; margin: auto;}
+	.ceo_wrap .ceo_logo {margin-bottom: 1em;}
+	.ceo_wrap .ceo_logo > img {width: 15em;}
+	.ceo_wrap .ceo_cont {position: relative; padding-top: 5.5em; border-top: 8px solid #ec2427;}
+	.ceo_wrap .ceo_cont > img { width: 68.2%; margin-bottom: 11.5em;}
+		.ceo_text {position: absolute; color: #ec2427; font-family: 'Playfair Display', serif; top: 0; right: 0;}
+		.ceo_text > li {font-size: 7.8vw; line-height: 1.2em; letter-spacing: 0.03em; text-align: right;}
+		.ceo_text > li > span {color: #fee100;}
+		.ceo_point {position: absolute; width: 5em; height: 1em; background-color: #ec2427; margin-top: -12em;}
+		.ceo_point_underline {position: absolute; width: 10em; height: 1px; background-color: #ec2427; margin-top: -10.5em;}
+	.ceo_wrap .ceo_text2 {color: #ec2427; line-height: 1.5em; margin-bottom: 7.5em;} 
+	.ceo_wrap .ceo_text2 > p {max-width: 960px;}
+
+/**** since 1975 ****/
+.since {height: 100vh; background-color: #ec2427;}
+.since_wrap {max-width: 80%; height: 100vh; margin: auto; position: relative;}
+	.since_img1, .since_img2 {position: absolute; top: 50%; left: 50%; color:#f1f1f1;}
+	.since_img1 > img, .since_img2 > img {width: 30vw;}
+	.since_img1 { transform: translate(-90%, -90%); z-index: 10;}
+	.since_txt1 { position: absolute; top:45%; right: 12%; z-index: 11; color: #f1f1f1; text-align: right;}
+	.since_txt2 { position: absolute; top:51%; left: 21%; z-index: 12; color: #f1f1f1;}
+	.since_txt2 > :first-child {font-size: 7vw; display: inline-block; font-style: italic; font-weight: lighter; line-height: 2em;}
+	.since_txt2 > :last-child {font-size: 6vw; display: inline-block; font-weight: bold;}
+	.since_txt1 > span {display: inline-block;}
+	.since_txt1 > :first-child {margin-right: 2em;}
+	.since_txt1 > span:before {content: ""; display: inline-block; width:1.5em; border-bottom: 1px solid #f1f1f1; margin-right: 0.5em;}
+
+
+
+/**** 브롬톤 슬로건 ****/
+
+.slogan {}
+	.slogan_wrap {width: 1200px; margin: auto; padding-top:10%;}
+		.slogan_tits {font-size: 3.5vw; color: #b4b4b4; line-height: 1.5em;}
+		.slogan_tits > p {letter-spacing: -0.05em;}
+			.slogan_tit1 {color: #c9ac8c; font-weight: 600;}
+			.slogan_tit2 {color: #333; font-weight: 600;}
+			.slogan_tit3 {color: #ec2427; font-weight: 600;}
+		
+		.slogan_imgs {}
+		.slogan_imgs > ul > li {float: left; margin-top: 5%;}
+			.model_s2l {width:40%; writing-mode: vertical-lr; padding: 5% 0 5% 1%; border-left: 1px solid #333;}
+			.fa-circle {font-size: 0.5em; line-height: 3.5em;}
+			.slogan_img {width: 60%;}
+			.slogan_img > img {width: 42.3vw;}
+
+/**** 슬라이드 페이저 ****/
+
+.slider {}
+	.slider_wrap {width:100%; max-width: 1200px; margin: auto;}
+		.slide_tit {padding:12% 0 15% 0;}
+		.slide_tit > h2 {font-family: 'Playfair Display', serif; font-size: 5vw; font-weight: bolder; color: #ec2427;}
+	.slide_wrap {width: 100%;}
+		.slide_num > :first-child {font-size: 4vw; font-weight: 900;}
+		.slide_num > :nth-child(2) {font-size: 2vw;}
+		.blank_line {width:100%; padding: 4% 75% 2% 0;}
+		.blank_line > span {width:100%; display: block; border-bottom: 1px solid #333}
+		.slide_cont > ul {}
+		.slide_cont > ul > li {float: left;}
+			.slide_txt {width: 60%; padding: 6% 10% 0 0;}
+			.slide_img {width: 40%; padding: 0 10%;}
