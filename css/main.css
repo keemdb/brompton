@@ -72,11 +72,36 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:1rem;
 		.slide_tit {padding:12% 0 15% 0;}
 		.slide_tit > h2 {font-family: 'Playfair Display', serif; font-size: 5vw; font-weight: bolder; color: #ec2427;}
 	.slide_wrap {width: 100%;}
-		.slide_num > :first-child {font-size: 4vw; font-weight: 900;}
-		.slide_num > :nth-child(2) {font-size: 2vw;}
-		.blank_line {width:100%; padding: 4% 75% 2% 0;}
-		.blank_line > span {width:100%; display: block; border-bottom: 1px solid #333}
-		.slide_cont > ul {}
-		.slide_cont > ul > li {float: left;}
-			.slide_txt {width: 60%; padding: 6% 10% 0 0;}
-			.slide_img {width: 40%; padding: 0 10%;}
+		.slide_cont {position: relative;}
+		.slide_cont > ul {width: 300%;}
+		.slide_cont > ul > li {float: left; width: 1200px; position: relative;}
+		.slide_cont .ban_tit {position: absolute; top: 6%; left: 5%;}
+			.ban_tit .ban_num {font-size: 4vw; font-weight: 900;}
+			.ban_tit .ban_mode {font-size: 1.2vw; font-weight: lighter}
+			.ban_tit .ban_cont {line-height: 2rem; padding: 15% 0;}
+		.slide_cont > button {background-color: transparent; border: none; position: absolute; font-size: 2rem;}
+		.slide_cont > #prev {top: 50%; left: 1%;}
+		.slide_cont > #next {top: 50%; right: 1%;}
+		.slide_cont > .ban_pagers {position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%;)}
+		.slide_cont > .ban_pagers > li {width: 0.5rem; height: 0.5rem; background-color: #eee; border-radius: 50%; margin: 0 0.5rem;}
+		.slide_cont > .ban_pagers > li.on {background-color: #666;}
+
+/**** 커스터마이즈 ****/
+.customize {margin-top: 10%; margin-bottom: 5%;}
+	.cus_tit, .cus_ban {width:100%; max-width: 1200px; margin: auto; text-align: center;}
+	.cus_tit > span {font-size: 6.7vw; font-weight: bolder; letter-spacing: 1em;}
+	.cus_tit > :first-child {color: #ec2427;}
+	.cus_tit > :nth-child(2) {color: #fee100;}
+	.cus_tit > :nth-child(3) {color: #0f71b4;}
+	.cus_tit > :nth-child(4) {color: #96bf48;}
+	.cus_tit > :nth-child(5) {color: #ff6138;}
+	.cus_tit > :nth-child(6) {color: #5b009c;}
+	.cus_tit > :nth-child(7) {color: #ef4423;}
+	.cus_tit > :nth-child(8) {color: #ea0a8e;}
+	.cus_tit > :nth-child(9) {color: #333;}
+	.cus_tit > :last-child {color: #9bc848;}
+	.cus_ban {margin-top: 5%;}
+
+
+/**** footer ****/
+.footer {width: 100%; height: 30vh; background-color: #222;}
