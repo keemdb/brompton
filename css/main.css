@@ -25,21 +25,45 @@
 .cycle-pager span.cycle-pager-active { color: #ec2427;}
 .cycle-pager > * { cursor: pointer;}
 
-header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:1rem; left: 50%; transform: translateX(-50%); height:4rem; font-weight: 800; background-color: #fff; z-index: 999;}
-	.logo {width: 9rem; float: left; margin-left: 4rem; line-height: 56px;}
+/**** 헤더 영역 ****/
+
+header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:2%; left: 50%; transform: translateX(-50%); height:6.9%; font-weight: 800; background-color: #fff; z-index: 999;}
+	.logo {width: 7.5vw; float: left; margin-left: 4rem; line-height: 56px;}
 	.logo > img {border: 3px solid #333;}
-	.navs {float: left; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
-	.navs .nav {float: left; padding: 0 2.5em;}
+	.navs {float: left; position: absolute; width: 38%; top:50%; left: 50%; transform: translate(-50%, -50%); font-size: 0.8vw; z-index: 9999;}
+	.navs .nav {float: left; padding: 0 3%;}
+	.nav_mo {display: none;}
 	.lngs {float: right; font-size:0.75em; margin-right: 3em;}
 	.lngs > li {float: left; padding: 0 1em; line-height: 62px;}
 	.lngs > li:first-child {color: #ec2427; padding: 0 1em;}
 
-/**** 배너 섹션 ****/
+/**** 네비게이션 responsive ****/
+@media screen and (max-width:1200px) {
+	.logo {width: 10vw;}
+	.navs {font-size: 1.2vw; width: 46%;}
+}
+@media screen and (max-width:768px) {
+	header {top: 0;}
+	.logo {width: 18%; margin-left: 2%;}
+	.navs, .lngs {display: none;}
+	.nav_mo {display: block; float: right; font-size: 2rem; line-height: 4.3rem; margin-right: 2%;}
+}
+@media screen and (max-width:480px) {
+	header {height: 4rem;}
+	.logo {margin-left: 2%;  line-height: 3.25rem;}
+	.navs, .lngs {display: none;}
+	.nav_mo {display: block; float: right; font-size: 2rem; line-height: 3.75rem; margin-right: 2%;}
+}
+
+
+/**** banner Section ****/
 .banner {}
- .bans {width: 100%;}
+ .bans {width: 100%;  position:relative;}
  .ban {width:100%; position:relative;}
  .ban > li {width:100%; position: absolute; top: 0; left: 0;}
 
+
+ /**** about Section ****/
 .about { width: 100%;}
 	.about_container { max-width: 1600px; margin: 13em auto;}
 	.about_container > ul > li {float: left; width: 40%;}
@@ -50,7 +74,19 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:1rem;
 		.whybrt_right > :first-child {font-size: 10.5vw; font-weight: bold; line-height: 1.25em; margin-left:0.75em;}
 		.whybrt_right > :nth-child(2) {font-size: 4.5vw; font-weight: bold; line-height: 0.25em;}
 		.whybrt_right > p { color:#999; margin-top:4em; padding-top:4em; border-top: 1px solid #333; line-height: 2em}
+/**** about Responsive ****/		
+@media screen and (max-width:768px) {
+	.about_container .whybrt_left {margin: 10% 3% 6% 7%;}
+	.whybrt_right > p {margin-top: 2em; padding-top: 2em; line-height: 1.75em;}
+}
+@media screen and (max-width:480px) {
+	.about_container > ul > li {width: 96%;}
+	.about_container .whybrt_left {margin: 0 2% ; overflow: hidden;}
+	.about_container .whybrt_right {margin: 0 2%;}
+	.whybrt_right > :first-child {font-size: 10.5vw; font-weight: bold; line-height: 1.75em; margin-left:0.25em;}
+}
 
+/**** CEO section ****/
 .ceo {width: 100%;}
 	.ceo_wrap {width: 100%; max-width:1056px; margin: auto;}
 	.ceo_wrap .ceo_logo {margin-bottom: 1em;}
@@ -64,8 +100,19 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:1rem;
 		.ceo_point_underline {position: absolute; width: 10em; height: 1px; background-color: #ec2427; margin-top: -10.5em;}
 	.ceo_wrap .ceo_text2 {color: #ec2427; line-height: 1.5em; margin-bottom: 7.5em;} 
 	.ceo_wrap .ceo_text2 > p {max-width: 960px;}
+/**** CEO Responsive ****/
+@media screen and (max-width: 768px) {
+	.ceo_wrap .ceo_logo {text-align: center;}
+	.ceo_wrap .ceo_cont {margin: 0 2%;}
+	.ceo_text > div {font-size: 13.5vw;}
+	.ceo_wrap .ceo_text2 {margin: 0 2% 7.5em 2%;} 
+}
+@media screen and (max-width: 480px) {
+	.ceo_text {top: 4%;}
+}
 
-/**** since 1975 ****/
+
+/**** since Section ****/
 .since {height: 100vh; background-color: #ec2427;}
 .since_wrap {max-width: 80%; height: 100vh; margin: auto; position: relative;}
 	.since_img1, .since_img2 {position: absolute; top: 50%; left: 50%; color:#f1f1f1;}
@@ -78,6 +125,23 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:1rem;
 	.since_txt1 > span {display: inline-block;}
 	.since_txt1 > :first-child {margin-right: 2em;}
 	.since_txt1 > span:before {content: ""; display: inline-block; width:1.5em; border-bottom: 1px solid #f1f1f1; margin-right: 0.5em;}
+/**** since Responsive ****/
+@media screen and (max-width: 768px) {
+	.since_img1 > img, .since_img2 > img {width: 40vw;}
+	.since_txt1 {right: -1%;}
+	.since_txt2 {left: 13%;}
+	.since_txt2 > :first-child {font-size: 9vw;}
+	.since_txt2 > :last-child {font-size: 8vw;}
+
+}
+@media screen and (max-width: 480px) {
+	.since_img1 > img, .since_img2 > img {width: 40vw;}
+	.since_txt1 {right: -1%;}
+	.since_txt2 {left: 13%;}
+	.since_txt2 > :first-child {font-size: 9vw;}
+	.since_txt2 > :last-child {font-size: 8vw;}
+	.since_img1, .since_img2 {position: relative;}
+}
 
 
 
