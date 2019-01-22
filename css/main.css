@@ -135,12 +135,14 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:2%; l
 
 }
 @media screen and (max-width: 480px) {
-	.since_img1 > img, .since_img2 > img {width: 40vw;}
-	.since_txt1 {right: -1%;}
-	.since_txt2 {left: 13%;}
+	.since_img1, .since_img2 {position: relative; top: 0; left: 0;}
+	.since_img1 { transform: translate(0, 0);}
+	.since_img1 > img, .since_img2 > img {width: 100%;}
+	.since_txt1 {position: relative; right: -1%;}
+	.since_txt2 {position: relative;}
 	.since_txt2 > :first-child {font-size: 9vw;}
 	.since_txt2 > :last-child {font-size: 8vw;}
-	.since_img1, .since_img2 {position: relative;}
+
 }
 
 
