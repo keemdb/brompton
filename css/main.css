@@ -58,8 +58,8 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:1rem;
 	.ceo_wrap .ceo_cont {position: relative; padding-top: 5.5em; border-top: 8px solid #ec2427;}
 	.ceo_wrap .ceo_cont > img { width: 68.2%; margin-bottom: 11.5em;}
 		.ceo_text {position: absolute; color: #ec2427; font-family: 'Playfair Display', serif; top: 0; right: 0;}
-		.ceo_text > li {font-size: 7.8vw; line-height: 1.2em; letter-spacing: 0.03em; text-align: right;}
-		.ceo_text > li > span {color: #fee100;}
+		.ceo_text > div {font-size: 7.8vw; line-height: 1.2em; letter-spacing: 0.03em; text-align: right;}
+		.ceo_text > div > span {color: #fee100;}
 		.ceo_point {position: absolute; width: 5em; height: 1em; background-color: #ec2427; margin-top: -12em;}
 		.ceo_point_underline {position: absolute; width: 10em; height: 1px; background-color: #ec2427; margin-top: -10.5em;}
 	.ceo_wrap .ceo_text2 {color: #ec2427; line-height: 1.5em; margin-bottom: 7.5em;} 
@@ -165,6 +165,5 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:1rem;
 }
 @keyframes botMove {
 	0% {transform:translateY(100%); opacity:0;}
-	99% {transform:translateY(-1%); opacity:1;}
 	100% {transform:translateY(0); opacity:1;}
 }
