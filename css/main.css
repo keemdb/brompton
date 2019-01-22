@@ -1,5 +1,30 @@
 @import 'base.css';
 
+/***** 공통사항 *****/
+@media screen and (max-width:768px) {
+	html, body {font-size:14px;}
+}
+@media screen and (max-width:480px) {
+	html, body {font-size:12px;}
+}
+@media screen and (max-width:320px) {
+	
+}
+
+@keyframes sizeUp {
+	0% {transform:scale(1);}
+	100% {transform:scale(1.2);}
+}
+@keyframes sizeDn {
+	0% {transform:scale(1.2);}
+	100% {transform:scale(1);}
+}
+
+.cycle-pager { text-align: center; width: 100%; z-index: 9000; position: absolute; bottom: 2%; overflow: hidden;}
+.cycle-pager span { font-family: arial; font-size: 30px; padding: 0 0.5rem; display: inline-block; color: #eee; cursor: pointer; }
+.cycle-pager span.cycle-pager-active { color: #ec2427;}
+.cycle-pager > * { cursor: pointer;}
+
 header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:1rem; left: 50%; transform: translateX(-50%); height:4rem; font-weight: 800; background-color: #fff; z-index: 999;}
 	.logo {width: 9rem; float: left; margin-left: 4rem; line-height: 56px;}
 	.logo > img {border: 3px solid #333;}
@@ -9,11 +34,19 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:1rem;
 	.lngs > li {float: left; padding: 0 1em; line-height: 62px;}
 	.lngs > li:first-child {color: #ec2427; padding: 0 1em;}
 
+/**** 배너 섹션 ****/
+.banner {}
+ .bans {width: 100%;}
+ .ban {width:100%; position:relative;}
+ .ban > li {width:100%; position: absolute; top: 0; left: 0;}
+
 .about { width: 100%;}
 	.about_container { max-width: 1600px; margin: 13em auto;}
-	.about_container > ul > li {float: left; width: 50%;}
-	.about_container .whybrt_left {padding: 0 2.5em 0 5em ;}
-	.about_container .whybrt_right {padding: 0 5em 0 2.5em;}
+	.about_container > ul > li {float: left; width: 40%;}
+	.about_container .whybrt_left {margin: 0 3% 0 7% ; overflow: hidden;}
+	.about_container .whybrt_right {margin: 0 7% 0 3%;}
+		.whybrt_left > img {animation-name:sizeDn; animation-duration:1s; animation-fill-mode:forwards;}
+		.whybrt_left > img:hover {animation-name:sizeUp;}
 		.whybrt_right > :first-child {font-size: 10.5vw; font-weight: bold; line-height: 1.25em; margin-left:0.75em;}
 		.whybrt_right > :nth-child(2) {font-size: 4.5vw; font-weight: bold; line-height: 0.25em;}
 		.whybrt_right > p { color:#999; margin-top:4em; padding-top:4em; border-top: 1px solid #333; line-height: 2em}
@@ -104,4 +137,34 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:1rem;
 
 
 /**** footer ****/
-.footer {width: 100%; height: 30vh; background-color: #222;}
+.footer {width: 100%; height: 30vh; text-align: center; background-color: #222;}
+.footer span {color: #f1f1f1;}
+
+
+/***** spa_ani *****/
+.spa_ani {animation-fill-mode:forwards; opacity:0; animation-timing-function:ease-out;}
+@keyframes opaShow {
+	0% {opacity:0; transform:scale(0.5);}
+	99% {opacity:1; transform:scale(1.02);}
+	100% {opacity:1; transform:scale(1);}
+}
+@keyframes rtMove {
+	0% {transform:translateX(100%); opacity:0;}
+	99% {transform:translateX(-1%); opacity:1;}
+	100% {transform:translateX(0); opacity:1;}
+}
+@keyframes ltMove {
+	0% {transform:translateX(-100%); opacity:0;}
+	99% {transform:translateX(1%); opacity:1;}
+	100% {transform:translateX(0); opacity:1;}
+}
+@keyframes topMove {
+	0% {transform:translateY(-100%); opacity:0;}
+	99% {transform:translateY(1%); opacity:1;}
+	100% {transform:translateY(0); opacity:1;}
+}
+@keyframes botMove {
+	0% {transform:translateY(100%); opacity:0;}
+	99% {transform:translateY(-1%); opacity:1;}
+	100% {transform:translateY(0); opacity:1;}
+}
