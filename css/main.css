@@ -113,7 +113,7 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:2%; l
 
 
 /**** since Section ****/
-.since {height: 100vh; background-color: #ec2427;}
+/* .since {height: 100vh; background-color: #ec2427;}
 .since_wrap {max-width: 80%; height: 100vh; margin: auto; position: relative;}
 	.since_img1, .since_img2 {position: absolute; top: 50%; left: 50%; color:#f1f1f1;}
 	.since_img1 > img, .since_img2 > img {width: 30vw;}
@@ -124,15 +124,14 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:2%; l
 	.since_txt2 > :last-child {font-size: 6vw; display: inline-block; font-weight: bold;}
 	.since_txt1 > span {display: inline-block;}
 	.since_txt1 > :first-child {margin-right: 2em;}
-	.since_txt1 > span:before {content: ""; display: inline-block; width:1.5em; border-bottom: 1px solid #f1f1f1; margin-right: 0.5em;}
+	.since_txt1 > span:before {content: ""; display: inline-block; width:1.5em; border-bottom: 1px solid #f1f1f1; margin-right: 0.5em;} */
 /**** since Responsive ****/
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
 	.since_img1 > img, .since_img2 > img {width: 40vw;}
 	.since_txt1 {right: -1%;}
 	.since_txt2 {left: 13%;}
 	.since_txt2 > :first-child {font-size: 9vw;}
 	.since_txt2 > :last-child {font-size: 8vw;}
-
 }
 @media screen and (max-width: 480px) {
 	.since_img1, .since_img2 {position: relative; top: 0; left: 0;}
@@ -143,47 +142,61 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:2%; l
 	.since_txt2 > :first-child {font-size: 9vw;}
 	.since_txt2 > :last-child {font-size: 8vw;}
 
-}
+} */
 
 
 
 /**** 브롬톤 슬로건 ****/
 
 .slogan {}
-	.slogan_wrap {width: 1200px; margin: auto; padding-top:10%;}
-		.slogan_tits {font-size: 3.5vw; color: #b4b4b4; line-height: 1.5em;}
+	.slogan_wrap {max-width: 1200px; margin: auto; padding-top:10%;}
+		.slogan_tits {font-size: 3.5vw; color: #b4b4b4; line-height: 1.5em; padding: 0 1%;}
 		.slogan_tits > p {letter-spacing: -0.05em;}
 			.slogan_tit1 {color: #c9ac8c; font-weight: 600;}
 			.slogan_tit2 {color: #333; font-weight: 600;}
 			.slogan_tit3 {color: #ec2427; font-weight: 600;}
 		
-		.slogan_imgs {}
+		.slogan_imgs { padding: 0 1%;}
 		.slogan_imgs > ul > li {float: left; margin-top: 5%;}
-			.model_s2l {width:40%; writing-mode: vertical-lr; padding: 5% 0 5% 1%; border-left: 1px solid #333;}
+			.model_s2l {width:38%; writing-mode: vertical-lr; padding: 5% 0 5% 1%; border-left: 1px solid #333;}
 			.fa-circle {font-size: 0.5em; line-height: 3.5em;}
-			.slogan_img {width: 60%;}
+			.slogan_img {width: 58%; text-align: center;}
 			.slogan_img > img {width: 42.3vw;}
+/**** Slogan Responsive ****/
+@media screen and (max-width: 768px) {
+	.slogan_tits {font-size: 8.5vw; color: #b4b4b4; line-height: 1.5em; padding: 0 1%;}
+	.model_s2l {width:25%;}
+	.slogan_img {width: 75%;}
+	.slogan_img > img {width: 100%;}
+}
+@media screen and (max-width: 480px) {
+	.slogan_wrap {padding: 10% 2%;}
+	.slogan_tits {font-size: 8.5vw; color: #b4b4b4; line-height: 1.5em; padding: 0 2%;}
+	.slogan_imgs {padding: 0}
+	.slogan_imgs > ul > li {float: left; width: 100%;}
+	.model_s2l {writing-mode: inherit; border: none; border-bottom: 1px solid #333; }
+	.slogan_img > img {width: 100%;}
+}
 
-/**** 슬라이드 페이저 ****/
 
-.slider {}
-	.slider_wrap {width:100%; max-width: 1200px; margin: auto;}
-		.slide_tit {padding:12% 0 15% 0;}
-		.slide_tit > h2 {font-family: 'Playfair Display', serif; font-size: 5vw; font-weight: bolder; color: #ec2427;}
-	.slide_wrap {width: 100%;}
-		.slide_cont {position: relative;}
-		.slide_cont > ul {width: 300%;}
-		.slide_cont > ul > li {float: left; width: 1200px; position: relative;}
-		.slide_cont .ban_tit {position: absolute; top: 6%; left: 5%;}
-			.ban_tit .ban_num {font-size: 4vw; font-weight: 900;}
-			.ban_tit .ban_mode {font-size: 1.2vw; font-weight: lighter}
-			.ban_tit .ban_cont {line-height: 2rem; padding: 15% 0;}
-		.slide_cont > button {background-color: transparent; border: none; position: absolute; font-size: 2rem;}
-		.slide_cont > #prev {top: 50%; left: 1%;}
-		.slide_cont > #next {top: 50%; right: 1%;}
-		.slide_cont > .ban_pagers {position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%;)}
-		.slide_cont > .ban_pagers > li {width: 0.5rem; height: 0.5rem; background-color: #eee; border-radius: 50%; margin: 0 0.5rem;}
-		.slide_cont > .ban_pagers > li.on {background-color: #666;}
+
+
+/**** Folding Guide ****/
+
+.fd_guide {width:100%; max-width: 1200px; margin: auto; font-size: 1rem;}
+	.fd_wrap {width:100%;}
+		.fd_tit {padding:20% 0 15% 0; font-family: 'Playfair Display', serif; font-size: 5vw; font-weight: bolder; color: #ec2427;}
+	.fd_cont {margin-bottom: 8%;}
+	.fd_cont > h1 {font-size: 4.5em; font-weight: 800; margin-bottom: 2%;}
+	.fd_cont > h1.txt_right {text-align: right;} 
+	.fd_cont > h1 > small {font-size: 1.5rem;}
+	.fd_cont > ul > li {float: left; width:50%;}
+	.fd_cont .fd_cont_txt {border-top: 1px solid #333; line-height: 1.5rem; padding: 11% 0;}
+	.fd_cont .fd_cont_img {padding: 0 6%;}
+
+
+
+
 
 /**** 커스터마이즈 ****/
 .customize {margin-top: 10%; margin-bottom: 5%;}
