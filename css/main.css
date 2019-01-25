@@ -27,11 +27,12 @@
 
 /**** 헤더 영역 ****/
 
-header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:2%; left: 50%; transform: translateX(-50%); height:4rem; font-weight: 800; background-color: #fff; z-index: 9999;}
+header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform: translateX(-50%); height:4rem; font-weight: 800; background-color: #fff; z-index: 9999; box-shadow: 5px 5px 10px rgba(0,0,0,.2);}
+.nav_wrap {width: 100%; max-width: 1600px; margin: auto;}
 	.logo {width: 7.5vw; float: left; margin-left: 4rem; line-height: 56px;}
 	.logo > img {border: 3px solid #333;}
-	.navs {float: left; position: absolute; width: 38%; top:50%; left: 50%; transform: translate(-50%, -50%); font-size: 0.8vw; z-index: 9999;}
-	.navs .nav {float: left; padding: 0 3%;}
+	.navs {float: left; position: absolute; width: 100%; top:50%; left: 50%; transform: translate(-50%, -50%); font-size: 0.8vw; z-index: 9999; text-align: center;}
+	.navs .nav {display: inline-block; padding: 0 2%;}
 	.nav_mo {display: none;}
 	.lngs {float: right; font-size:0.75em; margin-right: 3em;}
 	.lngs > li {float: left; padding: 0 1em; line-height: 62px;}
@@ -43,10 +44,10 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:2%; l
 	.navs {font-size: 1.2vw; width: 46%;}
 }
 @media screen and (max-width:768px) {
-	header {top: 0;}
-	.logo {width: 18%; margin-left: 2%;}
+	header {box-shadow: none;}
+	.logo {width: 18%; margin-left: 2%; line-height: 46px;}
 	.navs, .lngs {display: none;}
-	.nav_mo {display: block; float: right; font-size: 2rem; line-height: 4.3rem; margin-right: 2%;}
+	.nav_mo {display: block; float: right; font-size: 2rem; line-height: 4rem; margin-right: 2%;}
 }
 @media screen and (max-width:480px) {
 	header {height: 4rem;}
@@ -164,7 +165,8 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:2%; l
 			.slogan_img > img {width: 42.3vw;}
 /**** Slogan Responsive ****/
 @media screen and (max-width: 768px) {
-	.slogan_tits {font-size: 8.5vw; color: #b4b4b4; line-height: 1.5em; padding: 0 1%;}
+	.slogan_tits {font-size: 8.5vw; color: #b4b4b4; line-height: 1.5em; padd ing: 0 2%;}
+	.slogan_imgs { padding: 0 2%;}
 	.model_s2l {width:25%;}
 	.slogan_img {width: 75%;}
 	.slogan_img > img {width: 100%;}
@@ -185,8 +187,8 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:2%; l
 
 .fd_guide {width:100%; max-width: 1200px; margin: auto; font-size: 1rem;}
 	.fd_wrap {width:100%;}
-		.fd_tit {padding:20% 0 15% 0; font-family: 'Playfair Display', serif; font-size: 5vw; font-weight: bolder; color: #ec2427;}
-	.fd_cont {margin-bottom: 8%;}
+		.fd_tit {padding:20% 2% 15% 2%; font-family: 'Playfair Display', serif; font-size: 5vw; font-weight: bolder; color: #ec2427;}
+	.fd_cont {margin-bottom: 8%; padding: 0 2%;}
 	.fd_cont > h1 {font-size: 4.5em; font-weight: 800; margin-bottom: 2%;}
 	.fd_cont > h1.txt_right {text-align: right;} 
 	.fd_cont > h1 > small {font-size: 1.5rem;}
@@ -194,6 +196,21 @@ header {max-width: 1600px; width: 100%; margin: auto; position: fixed; top:2%; l
 	.fd_cont .fd_cont_txt {border-top: 1px solid #333; line-height: 1.5rem; padding: 11% 0;}
 	.fd_cont .fd_cont_img {padding: 0 6%;}
 
+@media screen and (max-width: 768px) {
+	.fd_tit {font-size: 8vw;}
+	.fd_cont > h1 {font-size: 6em; font-weight: 800; margin-bottom: 2%;}
+	.fd_cont > h1 > small {font-size: 2rem;}
+	.fd_cont .fd_cont_txt {border-top: 1px solid #333; line-height: 1.75rem; padding: 8% 0; font-size: 1.125rem;}
+	.fd_cont .fd_cont_img {padding: 0 3%;}
+}
+
+@media screen and (max-width: 480px) {
+	.fd_tit {font-size: 4.5rem;}
+	.fd_cont > ul > li {float: right; width:100%;}
+	.fd_cont .fd_cont_txt {border-top: 1px solid #333; line-height: 2rem; padding: 8% 0; font-size: 1.5rem;}
+	.fd_cont > h1.txt_right {text-align: right; border-bottom: 1px solid #333; padding-bottom: 2%; }
+	.fd_conts > :nth-child(2) .fd_cont_txt {border: none; line-height: 2rem; padding: 8% 0; font-size: 1.5rem;}
+}
 
 
 
