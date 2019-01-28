@@ -31,8 +31,12 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 .nav_wrap {width: 100%; max-width: 1600px; margin: auto;}
 	.logo {width: 7.5vw; float: left; margin-left: 4rem; line-height: 56px;}
 	.logo > img {border: 3px solid #333;}
-	.navs {float: left; position: absolute; width: 100%; top:50%; left: 50%; transform: translate(-50%, -50%); font-size: 0.8vw; z-index: 9999; text-align: center;}
-	.navs .nav {display: inline-block; padding: 0 2%;}
+	.navs {float: left; position: absolute; width: 100%; top:58%; left: 50%; transform: translate(-50%, -50%); font-size: 0.8vw; z-index: 9999; text-align: center;}
+	.navs .nav {display: inline-block; padding: 0 1.5%; cursor: pointer;}
+	.navs .nav a {color: #333;}
+	.navs .nav .under_dot {height:1px; width:0; background-color: transparent; transition: width .2s, background-color .5s; margin: 5px auto 0 auto;}
+	.navs .nav:hover .under_dot {width: 100%; background-color: #333;}
+	.navs .nav.act_link .under_dot {width: 3px; height: 3px; border-radius: 50%; background-color: #333;}
 	.nav_mo {display: none;}
 	.lngs {float: right; font-size:0.75em; margin-right: 3em;}
 	.lngs > li {float: left; padding: 0 1em; line-height: 62px;}
@@ -59,7 +63,7 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 
 /**** banner Section ****/
 .banner {}
- .bans {width: 100%;  position:relative;}
+ .bans {width: 100%; max-width: 1600px; margin: auto; position:relative; z-index: 9990;}
  .ban {width:100%; position:relative;}
  .ban > li {width:100%; position: absolute; top: 0; left: 0;}
 
@@ -85,6 +89,7 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 	.about_container .whybrt_left {margin: 0 2% ; overflow: hidden;}
 	.about_container .whybrt_right {margin: 0 2%;}
 	.whybrt_right > :first-child {font-size: 10.5vw; font-weight: bold; line-height: 1.75em; margin-left:0.25em;}
+	.whybrt_right > p {font-size: 1.25rem;}
 }
 
 /**** CEO section ****/
@@ -110,6 +115,7 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 }
 @media screen and (max-width: 480px) {
 	.ceo_text {top: 4%;}
+	.ceo_wrap .ceo_text2 {font-size: 1.25rem;} 
 }
 
 
@@ -208,17 +214,18 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 	.fd_tit {font-size: 4.5rem;}
 	.fd_cont > ul > li {float: right; width:100%;}
 	.fd_cont .fd_cont_txt {border-top: 1px solid #333; line-height: 2rem; padding: 8% 0; font-size: 1.5rem;}
-	.fd_cont > h1.txt_right {text-align: right; border-bottom: 1px solid #333; padding-bottom: 2%; }
+	.fd_cont > h1.txt_right {text-align: left; border-bottom: 1px solid #333; padding-bottom: 2%; }
 	.fd_conts > :nth-child(2) .fd_cont_txt {border: none; line-height: 2rem; padding: 8% 0; font-size: 1.5rem;}
 }
 
 
 
 
-/**** 커스터마이즈 ****/
+/**** 커스터마이즈 ****/ 
 .customize {margin-top: 10%; margin-bottom: 5%;}
+	.cus_tit_img {margin-bottom: 10%;}
 	.cus_tit, .cus_ban {width:100%; max-width: 1200px; margin: auto; text-align: center;}
-	.cus_tit > span {font-size: 6.7vw; font-weight: bolder; letter-spacing: 1em;}
+	.cus_tit > span {font-size: 1.25rem; font-weight: bolder; letter-spacing: 1em;}
 	.cus_tit > :first-child {color: #ec2427;}
 	.cus_tit > :nth-child(2) {color: #fee100;}
 	.cus_tit > :nth-child(3) {color: #0f71b4;}
@@ -229,7 +236,68 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 	.cus_tit > :nth-child(8) {color: #ea0a8e;}
 	.cus_tit > :nth-child(9) {color: #333;}
 	.cus_tit > :last-child {color: #9bc848;}
-	.cus_ban {margin-top: 5%;}
+	.cus_ban {position: relative; margin-top: 5%; max-width: 1000px;}
+		.cus_btn {position: absolute; width: 24px; height: 24px; border:2px solid #999; background-color: #999; border-radius: 50%; transition: .3s;}
+		.cus_btn > span {color: #fff; line-height: 21px; cursor: pointer;}
+		.cus_btn:hover {border:2px solid #999; background-color: #fff;}
+		.cus_btn:hover > span {color: #999; line-height: 21px;}
+		.frame_btn {top: 42%; left: 47%;}
+		.handle_btn {top: 12%; left: 59%;}
+		.exf_btn {top: 65%; left: 65%;}
+		.rack_btn {top: 52%; left: 23%;}
+		.gear_btn {top: 71%; left: 21%;}
+		.cus_ban .cus_info {position: absolute; background-color: #fff; box-shadow: 5px 5px 5px rgba(0, 0, 0, .3); font-size:  1rem; padding: 1rem; display: none;}
+		.cus_ban .cus_info .cus_info_tit {text-align: left; margin-bottom: 1em;}
+		.cus_ban .cus_info .cus_info_tit > h4 {font-weight: 600;}
+		.cus_ban .cus_info .cus_info_img {text-align: center; background-color: #f1f1f1;}
+		.cus_ban .cus_info .cus_info_img > ul > li {float:left; width: 25%;}
+		.cus_ban .cus_info .cus_info_img > ul > li {float:left; width: 25%;}
+		.cus_ban .cus_info .cus_info_img3 > ul > li {float:left; width: 33.333%;}
+		.cus_ban .cus_info .cus_info_sub {margin: 0.5em 0;}
+		.cus_ban .cus_info .cus_info_sub > ul > li {float:left; width: 25%; font-size: 0.75em; font-weight: 600}
+		.cus_ban .cus_info .cus_info_sub3 > ul > li {float:left; width: 33.333%; margin: 0.5em 0; font-size: 0.75em; font-weight: 600}
+		.cus_ban .cus_info .cus_info_sub > ul > li span {color: #999; font-weight: 300;}
+		.cus_ban .cus_info .cus_info_cont {text-align: left; font-size: 0.825em;}
+		.cus_ban .handle_info {width:30rem; top: 16%; left: 62%;}
+		.cus_ban .frame_info {width:25rem; top: 46%; left: 49%;}
+		.cus_ban .exf_info {width:25rem; top: 69%; left: 68%;}
+		.cus_ban .rack_info {width:25rem; top: 55%; left: 26%;}
+		.cus_ban .gear_info {width:25rem; top: 36%; left: -20%;}
+		.pd10 {padding: 0.75em;}
+/**** 커스터마이즈 responsive ****/
+@media screen and (max-width: 1200px) {
+	.cus_ban .gear_info {left: 25%;}
+	.cus_ban .handle_info {left: 60%;}
+}
+@media screen and (max-width: 768px) {
+	.cus_btn {display: none;}
+	.cus_ban .cus_info {position: static; display: block; width: 100%;  box-shadow: none; margin-bottom: 5em;}
+	.cus_ban .cus_info .cus_info_tit > h4 {text-align:center; font-size: 1.75em; font-weight: 600;}
+	.cus_ban .cus_info .cus_info_sub {margin-bottom: 2rem;}
+	.cus_ban .cus_info .cus_info_sub > ul > li {font-size: 1.25em; font-weight: 600}
+	.cus_ban .cus_info .cus_info_cont {font-size: 1.125em; line-height: 1.5em;}
+	.cus_ban .cus_info .cus_info_sub > ul > li span {color: #999; font-size: 0.825em;}
+	.cus_ban .cus_info .cus_info_img {background-color: transparent;}
+}
+@media screen and (max-width: 480px) {
+	.cus_ban .cus_info .cus_info_tit > h4 {text-align:center; font-size: 1.75em; font-weight: 600;}
+	.cus_ban .cus_info .cus_info_sub {margin-bottom: 2rem;}
+	.cus_ban .cus_info .cus_info_sub > ul > li {font-size: 1.25em; font-weight: 600}
+	.cus_ban .cus_info .cus_info_cont {font-size: 1.125em; line-height: 1.5em;}
+	.cus_ban .cus_info .cus_info_sub > ul > li span {color: #999; font-size: 0.825em;}
+	.cus_ban .cus_info .cus_info_img {background-color: transparent;}
+	
+}
+	
+/**** Accessories Section ****/
+.acc {width:100%; max-width: 1200px; margin: auto}
+.acc h3 {text-align: center;}
+
+
+
+
+
+
 
 
 /**** footer ****/
@@ -238,7 +306,7 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 
 
 /**** Top버튼 ****/
-.tops {position: fixed; right: 1rem; bottom: 5%; width: 40px; height: 40px; background-color: #333; border-radius: 50%; text-align: center;}
+.tops {position: fixed; right: 1rem; bottom: 5%; width: 40px; height: 40px; background-color: #333; border-radius: 50%; text-align: center; z-index: 9999; opacity: 0;}
 .tops .top_btn {color: #999; font-size: 1.5em; line-height: 40px; transition: .3s;}
 .tops .top_btn:hover {color:#f8f8f8}
 

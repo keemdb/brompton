@@ -1,5 +1,14 @@
 const log = console.log;
 
+$("body").imagesLoaded(function(){
+	$(window).trigger("resize");
+})
+
+/* 네비게이션 underline */
+$(".nav").click(function(){
+	$(".act_link").removeClass("act_link");
+	$(this).addClass("act_link");
+});
 
 
 
@@ -44,3 +53,66 @@ function fadeShow() {
 		});
 	}
 }
+
+
+
+
+/**** Customize hover ****/
+$(".close").click(function(){
+	$(this).parent().parent().parent().css({"display":"none"});
+});
+$(".handle_btn").mouseenter(function(){
+	$(".handle_info").css({"display":"block"});
+});
+$(".handle_btn").mouseleave(function(){
+	$(".handle_info").css({"display":"none"});
+});
+$(".frame_btn").mouseenter(function(){
+	$(".frame_info").css({"display":"block"});
+});
+$(".frame_btn").mouseleave(function(){
+	$(".frame_info").css({"display":"none"});
+});
+$(".exf_btn").mouseenter(function(){
+	$(".exf_info").css({"display":"block"});
+});
+$(".exf_btn").mouseleave(function(){
+	$(".exf_info").css({"display":"none"});
+});
+$(".rack_btn").mouseenter(function(){
+	$(".rack_info").css({"display":"block"});
+});
+$(".rack_btn").mouseleave(function(){
+	$(".rack_info").css({"display":"none"});
+});
+$(".gear_btn").mouseenter(function(){
+	$(".gear_info").css({"display":"block"});
+});
+$(".gear_btn").mouseleave(function(){
+	$(".gear_info").css({"display":"none"});
+});
+
+
+
+
+
+/**** Top버튼 ****/
+
+
+$(window).scroll(scTopAni);
+
+function scTopAni (){
+	var body = $("html, body").scrollTop();
+	var active = 200;
+	var $tops = $(".tops");
+		if(body > active) {
+		$tops.stop().animate({"opacity":1}, 500)
+	}
+	else{
+		$tops.stop().animate({"opacity":0}, 500)
+	}
+}
+
+$(".tops").click(function(){
+	$("html, body").stop().animate({"scrollTop":0}, 300);
+});
