@@ -10,6 +10,13 @@ $(".nav").click(function(){
 	$(this).addClass("act_link");
 });
 
+/* 네비게이션 사이드 */
+$(".nav_mo_btn").click(function(){
+	$(".nav_mo_wrap").stop().animate({"right":0}, 200);
+});
+$("#nav_mo_close").click(function(){
+	$(".nav_mo_wrap").stop().animate({"right":"-70%"}, 200);
+});
 
 
 //메인배너 / .bans
