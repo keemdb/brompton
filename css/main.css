@@ -307,12 +307,25 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 	.cus_ban .handle_info {margin-top: 3rem;}
 }
 	
-/**** Accessories Section ****/
-.acc {width:100%; max-width: 1200px; margin: auto}
-.acc h3 {text-align: center;}
-
-
-
+/**** BWCK Section ****/
+.bwck_wrap {width: 100%; max-width: 1600px; margin: auto;}
+	.bwck_main_bg {margin-top: 15rem;}
+	.bwck_cont {background-color: #ececec; text-align: center; margin-top: 15.5rem; padding: 5rem 0 10rem 0;}
+	.bwck_cont > h1 {padding-bottom: 5rem;}
+	.bwck_cont > .bwck_cont_txt {max-width: 50rem; margin: auto; line-height: 1.5rem; margin-bottom: 5.5rem;}
+	.bwck_btn {width: 15.5rem; height: 3rem; background-color: #f3ce13; transition: 0.3s; border: none;}
+	.bwck_btn > span {padding-left: 1em;}
+	.bwck_btn:hover {background-color: #333; color: #f3ce13;}
+	.bwck_gals {margin: 15rem 0 20rem 0;}
+		.bwck_gal {float: left; width:25%; margin: auto;}
+/**** BWCK responsive ****/
+@media screen and (max-width: 768px) {
+	.bwck_gals {margin: 15rem 2% 20rem 2%;}
+	.bwck_gal {float: left; width:50%;}
+}
+@media screen and (max-width: 480px) {
+	.bwck_gal {float: left; width:96%; margin: 0 2%;}
+}
 
 
 
