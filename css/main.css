@@ -307,6 +307,8 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 	.cus_ban .handle_info {margin-top: 3rem;}
 }
 	
+
+
 /**** BWCK Section ****/
 .bwck_wrap {width: 100%; max-width: 1600px; margin: auto;}
 	.bwck_main_bg {margin-top: 15rem;}
@@ -357,13 +359,32 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 
 
 /**** footer ****/
-.footer {width: 100%; background-color: #222;}
+.footer {width: 100%; background-color: #222; font-size: 1rem;}
 .footer_wrap {max-width:1600px; margin: auto; padding: 5rem 10rem}
 .ft_logo, .ft_navs, .ft_nav {float: left;}
-	.ft_logo > h1 {margin-bottom: 2rem;}
-		.ft_facebook, .ft_instagram {display: inline-block; width: 24px; }
-
-
+	.ft_logo {width: 13%; margin-right: 22%; font-size: 0.8125em;}
+	.ft_logo > h1 {margin-bottom: 3rem;}
+	.ft_logo span {color: #333;}
+		.ft_facebook, .ft_instagram {display: inline-block; width: 24px; height: 24px; border-radius: 50%; text-align: center; line-height: 24px; background-color: #f1f1f1; margin: 0 1em 5em 0; color: #333;}
+		.copyright {color: #f1f1f1;}
+	.ft_navs {width: 65%; font-size: 0.8125em; font-weight: 300;}
+	.ft_nav {width: 33.333%; line-height: 2rem;}
+	.ft_nav > p:first-child {color: #666;}
+	.ft_nav > p {color: #f1f1f1;}
+/**** footer reponsive ****/
+@media screen and (max-width: 1365px) {
+	.footer_wrap {padding: 5rem 2rem}
+}
+@media screen and (max-width: 900px) {
+	.ft_logo > h1 {width: 5em;}
+	.ft_logo, .ft_navs {width: 100%}
+	.copyright {margin-bottom: 5em;}
+	.ft_navs > ul > li:first-child {display: none;}
+}
+@media screen and (max-width: 480px) {
+	.footer {font-size: 1.25rem;}
+	.ft_nav {width: 100%; margin-bottom: 2em;}	
+}
 /**** Top버튼 ****/
 .tops {position: fixed; right: 1rem; bottom: 5%; width: 40px; height: 40px; background-color: #333; border-radius: 50%; text-align: center; z-index: 9999; opacity: 0;}
 .tops .top_btn {color: #999; font-size: 1.5em; line-height: 40px; transition: .3s;}
