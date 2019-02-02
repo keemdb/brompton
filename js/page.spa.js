@@ -1,4 +1,4 @@
-var gap = 200;		// page가 나타나기 전 px
+var gap = 400;		// page가 나타나기 전 px
 var now = 0;			// 현재 페이지
 var scTop = 0;		// 현재 문서의 scrollTop
 var pages = new Array();	// 각각의 페이지의 상단으로 부터 떨어진 거리
@@ -6,7 +6,7 @@ var scFn = function(){
 	$(".page").each(function(i){
 		pages[i] = $(this).offset().top;
 	});
-	scTop = $("html, body").scrollTop();
+	scTop = $(window, document, "html, body").scrollTop();
 	now = pages.length - 1;
 	for(var i in pages) {
 		if(scTop + gap < pages[i]) {
@@ -37,8 +37,7 @@ var scFn = function(){
 		eval($(this).data("fn")+"($(this))");
 	});
 };
-$(window).on("scroll", scFn);
-$("body").on("touchmove", scFn);
+$(window, document, "html, body").on("scroll touchmove", scFn);
 
 function barMove(obj) {
 	if(obj.width() == 0) obj.stop().animate({"width":obj.html()}, 2000,);

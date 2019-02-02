@@ -24,23 +24,23 @@
 			<div class="nav_wrap clear">
 				<h1 class="logo"><img src="../img/logo.svg" class="img" alt=""></h1>
 				<ul class="navs">
-					<li class="nav act_link" data-page="0">
+					<li class="nav act_link go_about" data-page="0">
 						<a href="#">ABOUT</a>
 						<div class="under_dot"></div>
 					</li>
-					<li class="nav" data-page="1">
+					<li class="nav go_folding" data-page="1">
 						<a href="#">FOLDING</a>
 						<div class="under_dot"></div>
 					</li>
-					<li class="nav" data-page="2">
+					<li class="nav go_custom" data-page="2">
 						<a href="#">CUSTOMIZE</a>
 						<div class="under_dot"></div>
 					</li>
-					<li class="nav" data-page="3">
+					<li class="nav go_acc" data-page="3">
 						<a href="#">ACCESSORIES</a>
 						<div class="under_dot"></div>
 					</li>
-					<li class="nav" data-page="4">
+					<li class="nav go_bwck" data-page="4">
 						<a href="#">CHAMPIONSHIP</a>
 						<div class="under_dot"></div>
 					</li>
@@ -56,13 +56,11 @@
 					<div class="nav_mo">
 						<span class="fa fa-close" id="nav_mo_close"></span><br><br>
 						<ul class="navs_mo">
-							<li class="nav" data-page="0">
-								ABOUT
-							</li>
-							<li class="nav" data-page="1">FOLDING</li>
-							<li class="nav" data-page="2">COSTOMIZE</li>
-							<li class="nav" data-page="3">ACCESSORIES</li>
-							<li class="nav" data-page="4">CHAMPIONSHIP</li>
+							<li class="nav go_about" data-page="0">ABOUT</li>
+							<li class="nav go_folding" data-page="1">FOLDING</li>
+							<li class="nav go_custom" data-page="2">COSTOMIZE</li>
+							<li class="nav go_acc" data-page="3">ACCESSORIES</li>
+							<li class="nav go_bwck" data-page="4">CHAMPIONSHIP</li>
 							<li class="nav">
 								<span>KR</span>
 								<span>EN</span>
@@ -89,7 +87,7 @@
 		<section class="about page">
 			<div class="about_container">
 				<ul class="clear">
-					<li class="whybrt_left spa_ani" data-name="ltMove" data-duration="0.7s"><img src="../img/about_left.jpg" class="img"></li>
+					<li class="whybrt_left"><img src="../img/about_left.jpg" class="img"></li>
 					<li class="whybrt_right">
 						<span class="spa_ani" data-name="botMove" data-duration="0.7s">Why</span>
 						<span class="spa_ani" data-name="botMove" data-duration="0.7s">Brompton?</span>
@@ -102,7 +100,7 @@
 				</ul>
 			</div>
 		</section>
-		<secton class="ceo">
+		<secton class="ceo spa_ani" data-name="botMove" data-duration="0.7s"">
 			<div class="ceo_wrap">
 				<ul>
 					<li class="ceo_logo"><img src="../img/brt_symbol.jpg" class="img"></li>
@@ -143,16 +141,16 @@
 		<section class="slogan page">
 			<div class="slogan_wrap">
 				<div class="slogan_tits">
-					<p>가장 <span class="slogan_tit1">미니멀</span>하고</p>
-					<p>가장 <span class="slogan_tit2">아름답게</span></p>
-					<p>접히는 <span class="slogan_tit3">미니벨로</span></p>
+					<p class="spa_ani" data-name="ltMove" data-duration="0.2s">가장 <span class="slogan_tit1">미니멀</span>하고</p>
+					<p class="spa_ani" data-name="rtMove" data-duration="0.4s">가장 <span class="slogan_tit2">아름답게</span></p>
+					<p class="spa_ani" data-name="ltMove" data-duration="0.6s">접히는 <span class="slogan_tit3">미니벨로</span></p>
 				</div>
 				<div class="slogan_imgs">
 					<ul class="clear">
 						<li class="model_s2l">
-							<p><span class="fa fa-circle"></span> BROMPTON S2L</p>
+							<p class="spa_ani" data-name="botMove" data-duration=".8s"><span class="fa fa-circle"></span> BROMPTON S2L</p>
 						</li>
-						<li class="slogan_img">
+						<li class="slogan_img spa_ani">
 							<img src="../img/slogan_img.jpg">
 						</li>
 					</ul>
@@ -162,9 +160,9 @@
 
 		<!-- Folding Guide Section -->
 		<section class="fd_guide page">
-			<h1 class="fd_tit">Folding Guide</h1>
+			<h1 class="fd_tit spa_ani">Folding Guide</h1>
 			<ul class="fd_conts clear">
-				<li class="fd_cont">
+				<li class="fd_cont page spa_ani" data-name="botMove" data-duration=".7s">
 					<h1>01 <small>Folding</small></h1>
 					<ul class="clear">
 						<li class="fd_cont_txt">브롬톤과 기존 접이식 자전거의 차이는 ‘접는 방식’에 있다.
@@ -173,7 +171,7 @@
 						<li class="fd_cont_img"><img src="../img/folding1.jpg" class="img" alt=""></li>
 					</ul>
 				</li>
-				<li class="fd_cont">
+				<li class="fd_cont page spa_ani" data-name="botMove" data-duration=".7s">
 					<h1 class="txt_right">02 <small>Semi-Folding</small></h1>
 					<ul class="clear">
 						<li class="fd_cont_img"><img src="../img/folding2.jpg" class="img" alt=""></li>
@@ -181,7 +179,7 @@
 							자립이 가능하도록 설계되어 있어 별도의 스탠드가 필요하지 않습니다.</li>
 					</ul>
 				</li>
-				<li class="fd_cont">
+				<li class="fd_cont page spa_ani" data-name="botMove" data-duration=".7s"">
 					<h1>03 <small>Unfolding</small></h1>
 					<ul class="clear">
 						<li class="fd_cont_txt">완전 펼쳐진 상태의 브롬톤은 폴딩자전거중
@@ -196,7 +194,7 @@
 
 		<!-- customize -->
 		<section class="customize page">
-			<div class="cus_tit_img">
+			<div class="cus_tit_img spa_ani" data-name="botMove" data-duration="0.7s">
 				<img src="../img/frame_color.jpg" class="img" alt="">
 			</div>
 			<div class="cus_tit wrap">
@@ -343,12 +341,12 @@
 		</section>
 
 		<!-- BWCK Section -->
-		<section class="bwck page">
+		<section class="bwck">
 			<div class="bwck_wrap">
 				<div class="bwck_main_bg"><img src="../img/bwck_main_bg.jpg" class="img"></div>
-				<div class="bwck_cont">
-					<h1><img src="../img/bwck2016_logo.png"></h1>
-					<div class="bwck_cont_txt">
+				<div class="bwck_cont page">
+					<h1 class="spa_ani" data-name="botMove" data-duration="0.7s"><img src="../img/bwck2016_logo.png"></h1>
+					<div class="bwck_cont_txt spa_ani" data-name="botMove" data-duration="1s">
 						<p>브롬톤 월드 챔피언십(BWC)은<br>
 							영국 브롬톤 본사가 개최하는 내셔널 대회로,<br>
 							전세계 40여국에서 매년 동일하게 진행되는 브롬톤 라이더들의 축제입니다.<br>
@@ -361,7 +359,7 @@
 						<p>이 외에도 자전거를 접고 펴는 시간으로 경쟁하는 폴딩이벤트와 다양한 부가 이벤트가 준비되어 있어<br>
 							참가자 뿐 아니라 동행한 가족과 친구, 연인들과 함께 즐거운 추억을 만들 수 있는 행사입니다.</p>
 					</div>
-					<button class="bwck_btn">BWCK 참가신청 하러가기<span class="fa fa-arrow-right"></span></button>
+					<button class="bwck_btn spa_ani" data-name="botMove" data-duration="1.5s">BWCK 참가신청 하러가기<span class="fa fa-arrow-right"></span></button>
 				</div>
 				<div class="bwck_gals">
 					<ul class="clear">
@@ -373,11 +371,11 @@
 				</div>
 		</section>
 
-		<section class="partners">
+		<section class="partners page">
 			<div class="partners_conts">
-				<p class="partner_tit">Partners</p>
-				<p class="partner_tit2">BROMPTON World Championship SPONSOR</p>
-				<ul class="clear">
+				<p class="partner_tit spa_ani" date-name="rtMove" data-duration="0.7s">Partners</p>
+				<p class="partner_tit2 spa_ani" date-name="rtMove" data-duration="1.3s">BROMPTON World Championship SPONSOR</p>
+				<ul class="clear spa_ani" date-name="rtMove" data-duration="2s">
 					<li><img src="../img/spons_1.svg" class="img"></li>
 					<li><img src="../img/spons_2.svg" class="img"></li>
 					<li><img src="../img/spons_3.svg" class="img"></li>
@@ -404,7 +402,7 @@
 					<h1><img src="../img/logo_fff.svg"></h1>
 					<div class="ft_facebook"><span class="fa fa-facebook"></span></div>
 					<div class="ft_instagram"><span class="fa fa-instagram"></span></div>
-					<p class="copyright">2019 Brompton</p>
+					<p class="copyright">&#169; 2019 Brompton Bicycle Lt</p>
 				</li>
 				<li class="ft_navs">
 					<ul class="clear">

@@ -53,12 +53,16 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 	.navs, .lngs {display: none;}
 	.nav_mo_btn {display: block; float: right; font-size: 2rem; line-height: 4rem; margin-right: 2%;}
 	.nav_mo_wrap {position: fixed; display: block; top: 0; right: -70%; width: 70%; height: 100vh; background-color: #333;}
-	.nav_mo {color: #fff; text-align: right; font-size:2rem; line-height: 3rem; padding: 2rem;}
+	.nav_mo {color: #fff; text-align: right; font-size:2rem; line-height: 3rem; padding: 2rem; cursor: pointer;}
+	.navs_mo > .nav {color:#f1f1f1; transition: 0.3s;}
+	.navs_mo > .nav:hover {color:#666;}
 	.nav_mo > ul > li:nth-child(5) {margin-bottom: 2em}
 	.nav_mo > ul > li > span {font-size: 1.125rem;}
 	.nav_mo > ul > li > :first-child {color: #ec2427;}
 		.sns_mo {font-size: 1.25rem; margin-top: 3rem;}
 		.sns_mo > span {display: inline-block; padding-left: 1rem;}
+	#nav_mo_close {color:#f1f1f1; transition: 0.3s;}
+	#nav_mo_close:hover {color:#666;}
 }
 @media screen and (max-width:480px) {
 	header {height: 4rem;}
@@ -176,8 +180,9 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 		.slogan_imgs > ul > li {float: left; margin-top: 5%;}
 			.model_s2l {width:38%; writing-mode: vertical-lr; padding: 5% 0 5% 1%; border-left: 1px solid #333;}
 			.fa-circle {font-size: 0.5em; line-height: 3.5em;}
-			.slogan_img {width: 58%; text-align: center;}
-			.slogan_img > img {width: 42.3vw;}
+			.slogan_img {width: 62%; text-align: center; overflow: hidden; }
+			.slogan_img > img {width: 42.3vw;animation-name: sizeDn; animation-duration: 1s; animation-fill-mode: forwards;}
+			.slogan_img > img:hover {animation-name: sizeUp;}
 /**** Slogan Responsive ****/
 @media screen and (max-width: 768px) {
 	.slogan_tits {font-size: 8.5vw; color: #b4b4b4; line-height: 1.5em; padd ing: 0 2%;}
@@ -319,7 +324,9 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 	.bwck_btn > span {padding-left: 1em;}
 	.bwck_btn:hover {background-color: #333; color: #f3ce13;}
 	.bwck_gals {margin: 15rem 0 20rem 0;}
-		.bwck_gal {float: left; width:25%; margin: auto;}
+		.bwck_gal {float: left; width:25%; margin: auto; overflow: hidden;}
+		.bwck_gal > img {animation-name:sizeDn; animation-duration:1s; animation-fill-mode:forwards;}
+		.bwck_gal > img:hover {animation-name:sizeUp;}
 	.partners {text-align: center;}
 /**** BWCK responsive ****/
 @media screen and (max-width: 768px) {
@@ -328,6 +335,7 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 }
 @media screen and (max-width: 480px) {
 	.bwck_gal {float: left; width:96%; margin: 0 2%;}
+	.bwck_cont > .bwck_cont_txt {padding: 0 3%; text-align: center;}
 }
 
 
@@ -362,12 +370,14 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 .footer {width: 100%; background-color: #222; font-size: 1rem;}
 .footer_wrap {max-width:1600px; margin: auto; padding: 5rem 10rem}
 .ft_logo, .ft_navs, .ft_nav {float: left;}
-	.ft_logo {width: 13%; margin-right: 22%; font-size: 0.8125em;}
+	.ft_logo {width: 15%; margin-right: 22%; font-size: 0.8125em;}
 	.ft_logo > h1 {margin-bottom: 3rem;}
 	.ft_logo span {color: #333;}
-		.ft_facebook, .ft_instagram {display: inline-block; width: 24px; height: 24px; border-radius: 50%; text-align: center; line-height: 24px; background-color: #f1f1f1; margin: 0 1em 5em 0; color: #333;}
+		.ft_facebook, .ft_instagram {display: inline-block; width: 24px; height: 24px; border-radius: 50%; text-align: center; line-height: 24px; background-color: #f1f1f1; margin: 0 1em 5em 0; color: #333; transition: 0.3s;}
+		.ft_facebook:hover > span {color: #999;}
+		.ft_instagram:hover > span {color: #999;}
 		.copyright {color: #f1f1f1;}
-	.ft_navs {width: 65%; font-size: 0.8125em; font-weight: 300;}
+	.ft_navs {width: 63%; font-size: 0.8125em; font-weight: 300;}
 	.ft_nav {width: 33.333%; line-height: 2rem;}
 	.ft_nav > p:first-child {color: #666;}
 	.ft_nav > p {color: #f1f1f1;}
@@ -393,19 +403,20 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 /***** spa_ani *****/
 .spa_ani {animation-fill-mode:forwards; opacity:0; animation-timing-function:ease-out;}
 @keyframes opaShow {
-	0% {opacity:0; transform:scale(0.5);}
-	99% {opacity:1; transform:scale(1.02);}
+	0% {opacity:0; transform:scale(0.9);}
 	100% {opacity:1; transform:scale(1);}
 }
 @keyframes rtMove {
-	0% {transform:translateX(100%); opacity:0;}
-	99% {transform:translateX(-1%); opacity:1;}
+	0% {transform:translateX(7%); opacity:0;}
 	100% {transform:translateX(0); opacity:1;}
 }
 @keyframes ltMove {
-	0% {transform:translateX(-100%); opacity:0;}
-	99% {transform:translateX(1%); opacity:1;}
+	0% {transform:translateX(-7%); opacity:0;}
 	100% {transform:translateX(0); opacity:1;}
+}
+@keyframes ltMoveAbs {
+	0% {top:10%; opacity:0;}
+	100% {top:0; opacity:1;}
 }
 @keyframes topMove {
 	0% {transform:translateY(-100%); opacity:0;}
@@ -413,6 +424,6 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 	100% {transform:translateY(0); opacity:1;}
 }
 @keyframes botMove {
-	0% {transform:translateY(100%); opacity:0;}
+	0% {transform:translateY(10%); opacity:0;}
 	100% {transform:translateY(0); opacity:1;}
 }

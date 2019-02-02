@@ -18,6 +18,28 @@ $("#nav_mo_close").click(function(){
 	$(".nav_mo_wrap").stop().animate({"right":"-70%"}, 200);
 });
 
+/* 네비게이션 스크롤 */
+$(".go_about").click(function(e) {
+	var aboutTop = $(".about").offset();        
+	$('body, html').animate({scrollTop: aboutTop.top});
+}); ////click
+$(".go_folding").click(function(e) {
+	var foldingTop = $(".fd_guide").offset();        
+	$('body, html').animate({scrollTop: foldingTop.top});
+}); ////click
+$(".go_custom").click(function(e) {
+	var customTop = $(".customize").offset();        
+	$('body, html').animate({scrollTop: customTop.top});
+}); ////click
+$(".go_acc").click(function(e) {
+	var accTop = $(".acc").offset();        
+	$('body, html').animate({scrollTop: accTop.top});
+}); ////click
+$(".go_bwck").click(function(e) {
+	var bwckTop = $(".bwck").offset();        
+	$('body, html').animate({scrollTop: bwckTop.top});
+}); ////click
+
 
 //메인배너 / .bans
 fadeShow();
@@ -106,10 +128,10 @@ $(".gear_btn").mouseleave(function(){
 /**** Top버튼 ****/
 
 
-$(window).scroll(scTopAni);
+$(window, document, "html, body").scroll(scTopAni);
 
 function scTopAni (){
-	var body = $("html, body").scrollTop();
+	var body = $(window, document, "html, body").scrollTop();
 	var active = 200;
 	var $tops = $(".tops");
 		if(body > active) {
@@ -120,6 +142,6 @@ function scTopAni (){
 	}
 }
 
-$(".tops").click(function(){
+$(".tops, .logo").click(function(){
 	$("html, body").stop().animate({"scrollTop":0}, 300);
 });
