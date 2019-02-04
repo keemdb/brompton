@@ -77,8 +77,8 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 }
 
 /**** banner Section ****/
-.banner {}
- .bans {width: 100%; max-width: 1600px; margin: auto; position:relative; z-index: 9990;}
+.banner {margin-top: 4rem;}
+ .bans {width: 100%; margin: auto; position:relative; z-index: 9990;}
  .ban {width:100%; position:relative;}
  .ban > li {width:100%; position: absolute; top: 0; left: 0;}
 
