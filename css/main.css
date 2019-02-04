@@ -61,7 +61,8 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 	.nav_mo > ul > li > span {font-size: 1.125rem;}
 	.nav_mo > ul > li > :first-child {color: #ec2427;}
 		.sns_mo {font-size: 1.25rem; margin-top: 3rem;}
-		.sns_mo > span {display: inline-block; padding-left: 1rem;}
+		.sns_mo > a {display: inline-block; padding-left: 1rem; color: #f1f1f1; transition: 0.5s;}
+		.sns_mo > a:hover {color: #666;}
 	#nav_mo_close {color:#f1f1f1; transition: 0.3s;}
 	#nav_mo_close:hover {color:#666;}
 }
@@ -346,6 +347,8 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 	.partner_tit {font-size: 1.25rem; color: #666; font-weight: 700; margin-bottom: 3rem;}
 	.partner_tit2 {font-size: 2vw; color: #fff; font-weight: 700; margin-bottom: 5rem;}	
 	.partners_conts > ul > li {float: left; width: 16.666%; padding: 1rem;}
+	.partners_conts img {animation-name: sizeDn; animation-duration: 1s; animation-fill-mode: forwards; cursor: pointer;}
+	.partners_conts img:hover {animation-name: sizeUp;}
 /**** partners responsive ****/
 @media screen and (max-width: 1365px) {
 	.partners {margin-left: 6rem;}
@@ -370,7 +373,7 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 /**** footer ****/
 .footer {width: 100%; background-color: #222; font-size: 1rem;}
 .footer_wrap {max-width:1600px; margin: auto; padding: 5rem 10rem}
-.ft_logo, .ft_navs, .ft_nav {float: left;}
+.ft_logo, .ft_navs, .ft_nav, .ft_nav2 {float: left;}
 	.ft_logo {width: 15%; margin-right: 22%; font-size: 0.8125em;}
 	.ft_logo > h1 {margin-bottom: 3rem;}
 	.ft_logo span {color: #333;}
@@ -379,10 +382,15 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 		.ft_instagram:hover > span {color: #999;}
 		.copyright {color: #f1f1f1;}
 	.ft_navs {width: 63%; font-size: 0.8125em; font-weight: 300;}
-	.ft_nav {width: 33.333%; line-height: 2rem;}
+	.ft_navs > ul > li {width: 33.333%; line-height: 2rem;}
 	.ft_nav > p:first-child {color: #666;}
-	.ft_nav > p {color: #f1f1f1; cursor: pointer;}
+	.ft_nav > p, .ft_nav a {color: #f1f1f1; cursor: pointer;}
 	.ft_nav > p:hover {color: #666;}
+	.ft_nav2 > p:first-child {color: #666;}
+	.ft_nav2 > p, .ft_nav2 a {color: #f1f1f1;}
+	.ft_nav a:hover {color: #666;}
+	.ft_nav2 a:hover {color: #666;}
+
 	
 /**** footer reponsive ****/
 @media screen and (max-width: 1365px) {
@@ -396,7 +404,8 @@ header {width: 100%; margin: auto; position: fixed; top: 0; left: 50%; transform
 }
 @media screen and (max-width: 480px) {
 	.footer {font-size: 1.25rem;}
-	.ft_nav {width: 100%; margin-bottom: 2em;}	
+	.ft_navs > ul > li {width: 100%;}
+	.ft_nav, .ft_nav2 {margin-bottom: 2em;}	
 }
 /**** Top버튼 ****/
 .tops {position: fixed; right: 1rem; bottom: 5%; width: 40px; height: 40px; background-color: #333; border-radius: 50%; text-align: center; z-index: 9999; opacity: 0; cursor: pointer;}
